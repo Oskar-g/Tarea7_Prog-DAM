@@ -20,7 +20,7 @@ public class Util implements Serializable{
 // *********************************** CRUD Lista Articulos **********************************************
     
     /**
-     * Método que crea un articulo en la lista, si este no existe previamente.
+     * Metodo que crea un articulo en la lista, si este no existe previamente.
      * @param articulo 
      */
     public static void crearArticuloEnLista(Articulo articulo){
@@ -41,7 +41,7 @@ public class Util implements Serializable{
     }
     
     /**
-     * Método que elimina un articulo existente en la lista.
+     * Metodo que elimina un articulo existente en la lista.
      * @param codigoArticulo 
      */
     public static void borrarArticuloDeLista(String codigoArticulo){
@@ -61,7 +61,7 @@ public class Util implements Serializable{
     }
     
     /**
-     * Método que actualiza un articulo existente en la lista de articulos.
+     * Metodo que actualiza un articulo existente en la lista de articulos.
      * Si no existe, se notificara con un panel con el mensaje correspondiente.
      * @param articulo
      */
@@ -93,7 +93,7 @@ public class Util implements Serializable{
 
                     if(null != articulo.getListaFamiliaArticulo() && !articulo.getListaFamiliaArticulo().isEmpty()){
                         ArrayList<FamiliaArticulo> listaFamilia = new ArrayList<>();
-                        // Añadimos las familias que ya estaban en el articulo
+                        // Anadimos las familias que ya estaban en el articulo
                         articuloEncontrado.getListaFamiliaArticulo().forEach((familia) -> {
                             listaFamilia.add(familia);
                         });
@@ -101,11 +101,11 @@ public class Util implements Serializable{
                         articuloEncontrado.getListaFamiliaArticulo().forEach((familia) -> {
                             articuloEncontrado.getListaFamiliaArticulo().remove(familia);
                         });
-                        // Añadimos las familias que lleguen en el nuevo articulo.
+                        // Anadimos las familias que lleguen en el nuevo articulo.
                         articulo.getListaFamiliaArticulo().forEach((familia) -> {
                             listaFamilia.add(familia);
                         });
-                        // Añadimos la lista resultante al articulo que se va a modificar
+                        // Anadimos la lista resultante al articulo que se va a modificar
                         articuloEncontrado.setListaFamiliaArticulo(listaFamilia);
                     }
                     borrarArticuloDeLista(codigoArticuloBuscar);
@@ -132,7 +132,7 @@ public class Util implements Serializable{
     }
             
     /**
-     * Método que devuelve la lista de articulos.
+     * Metodo que devuelve la lista de articulos.
      * @return listaArticulos
      */
     public static ArrayList<Articulo> listarArticulos(){
@@ -141,7 +141,7 @@ public class Util implements Serializable{
     }
     
     /**
-     * Método que busca en la lista de articulos, y devuelve el coincidente con el codigo
+     * Metodo que busca en la lista de articulos, y devuelve el coincidente con el codigo
      * llegado por parametro.
      * @param codigoArticulo
      * @return 

@@ -2,6 +2,7 @@ package programacion.dam.tarea7.beans;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -15,7 +16,7 @@ public class Articulo implements Serializable{
     private Double precio;
     private Double descuento;
     private Integer iva;
-    private ArrayList<FamiliaArticulo> listaFamiliaArticulo;
+    private List<FamiliaArticulo> listaFamiliaArticulo;
     
     // Constructores
     public Articulo(){
@@ -73,12 +74,17 @@ public class Articulo implements Serializable{
         this.iva = iva;
     }
 
-    public ArrayList<FamiliaArticulo> getListaFamiliaArticulo() {
+    public List<FamiliaArticulo> getListaFamiliaArticulo() {
         return listaFamiliaArticulo;
     }
 
-    public void setListaFamiliaArticulo(ArrayList<FamiliaArticulo> listaFamiliaArticulo) {
+    public void setListaFamiliaArticulo(List<FamiliaArticulo> listaFamiliaArticulo) {
         this.listaFamiliaArticulo = listaFamiliaArticulo;
+    }
+
+    @Override
+    public String toString() {
+        return "Articulo{" + "codArticulo=" + codArticulo + ", descripcion=" + descripcion + ", precio=" + precio + ", descuento=" + descuento + ", iva=" + iva + ", listaFamiliaArticulo=" + listaFamiliaArticulo + '}';
     }
 }
 

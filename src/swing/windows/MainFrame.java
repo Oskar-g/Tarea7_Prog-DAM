@@ -64,40 +64,81 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        articulosTable = new javax.swing.JTable();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        menuAbrir = new javax.swing.JMenuItem();
+        menuGuardar = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        menuDatos = new javax.swing.JMenu();
+        menuListados = new javax.swing.JMenu();
+        menuSalir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        articulosTable.setModel(getTableModel());
-        articulosTable.setColumnSelectionAllowed(true);
-        articulosTable.setName(""); // NOI18N
-        articulosTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane1.setViewportView(articulosTable);
-        articulosTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jMenu1.setText("Archivo");
+
+        menuAbrir.setText("Abrir");
+        menuAbrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAbrirActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuAbrir);
+
+        menuGuardar.setText("Guardar");
+        jMenu1.add(menuGuardar);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Alta");
+        jMenuBar1.add(jMenu2);
+
+        menuDatos.setText("Datos");
+        jMenuBar1.add(menuDatos);
+
+        menuListados.setText("Listados");
+        jMenuBar1.add(menuListados);
+
+        menuSalir.setText("Salir");
+        menuSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuSalirMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(menuSalir);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void menuAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAbrirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuAbrirActionPerformed
+
+    private void menuSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuSalirMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_menuSalirMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable articulosTable;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem menuAbrir;
+    private javax.swing.JMenu menuDatos;
+    private javax.swing.JMenuItem menuGuardar;
+    private javax.swing.JMenu menuListados;
+    private javax.swing.JMenu menuSalir;
     // End of variables declaration//GEN-END:variables
 }
